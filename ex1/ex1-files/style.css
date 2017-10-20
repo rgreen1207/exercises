@@ -1,0 +1,59 @@
+﻿body {
+    background-color: gray;
+}
+
+.nav_link_container{
+    margin-right:14px;
+    margin-top:19px;
+    display: inline-block;
+    float:right
+}
+
+.top_nav {
+    color: white;
+    font-size: 85%;
+    width: 50px;
+    float: right;
+    text-align: center;
+    display: inline-block;
+    text-decoration:none;
+}
+.top_nav:hover{
+    color:red;
+}
+
+.signup_button{
+    background-color: orange;
+    float:right;
+}
+
+.signup_button:hover{
+    background-color: brown;
+}
+
+.signup_button:active{
+    background-color:gray
+}
+
+.page_title_header{
+    font-size:225%;
+    color: white;
+    display: inline-block;
+    margin-top:16px;
+    margin-left: 36px;
+}
+
+.page_container{
+    position:relative;
+    background-color: black;
+    width: 960px;
+    height: 1185px;
+    margin-left: 25%;
+}
+
+.footer_links {
+    background-color:tan;
+    position:absolute;
+    bottom: 0;
+    height:97px;
+}
