@@ -17,30 +17,21 @@
     text-align: center;
     display: inline-block;
     text-decoration:none;
+    padding-bottom:10px;
 }
 .top_nav:hover{
+    text-decoration:none;
     color:red;
-}
-
-.signup_button{
-    background-color: orange;
-    float:right;
-}
-
-.signup_button:hover{
-    background-color: brown;
-}
-
-.signup_button:active{
-    background-color:gray
+    border-bottom: 8px solid darkred;
 }
 
 .page_title_header{
-    font-size:225%;
+    font-size:175%;
     color: white;
     display: inline-block;
     margin-top:16px;
     margin-left: 36px;
+    padding-bottom:5px;
 }
 
 .page_container{
@@ -51,8 +42,59 @@
     margin-left: 25%;
 }
 
+.image_holder{
+    width:inherit;
+    height:519px;
+    background-image:url('gti_frontend.jpg');
+    border-bottom: 8px solid darkred;
+}
+
+.background_img{
+    height:519px;
+    width:inherit;
+    object-position:center;
+    
+}
+
+.event_info{
+    float:right;
+    height:422px;
+    width: 250px;
+    display: inline-block;
+    margin-left:50%;
+    margin-bottom:50px;
+    color:white;
+    text-align:justify right;
+    margin-right:45px;
+    margin-top:44px;
+}
+
+.signup_button{
+    width:250px;
+    background-color: orange;
+}
+
+.signup_button:hover{
+    background-color: brown;
+}
+
+.signup_button:active{
+    background-color:gray
+}
+
+.event_photos{
+    float:left;
+    position:absolute;
+    height:422px;
+    width:500px;
+    display: inline-block;
+    margin-left:35px;
+    margin-bottom:50px;
+}
+
 .footer_links {
-    background-color:tan;
+    background-color:silver;
+    width:inherit;
     position:absolute;
     bottom: 0;
     height:97px;
