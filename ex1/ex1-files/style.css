@@ -134,3 +134,31 @@
     display: inline-block;
     vertical-align:middle;
 }
+
+.overlay_title{
+    color:black;
+    background-color:darkgrey;
+    opacity:.5;
+    margin-left: 85px;
+    font-size:50px;
+    text-align:center;
+}
+
+.overlay_description{
+    margin-left:85px;
+    margin-top:50px;
+}
+
+.blueprint_button{
+    font-size:25px;
+    background-color: orange;
+    border:hidden;
+}
+
+.blueprint_button:hover{
+    background-color: brown;
+}
+
+.blueprint_button:active{
+    background-color:gray
+}
