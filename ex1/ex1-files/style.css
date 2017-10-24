@@ -89,13 +89,48 @@
     width:500px;
     display: inline-block;
     margin-left:35px;
+    margin-top: 55px;
     margin-bottom:50px;
+    margin-right: 137px;
+}
+.small_pic{
+    width:inherit;
+    filter: grayscale(75%);
 }
 
-.footer_links {
+.footer{
     background-color:silver;
     width:inherit;
-    position:absolute;
-    bottom: 0;
     height:97px;
+    bottom:0;
+    position:absolute;
+}
+
+.footer_text{
+    color:black;
+    text-decoration:none;
+    margin-top: 48px;
+    margin-left: 35px;
+    display: inline-block;
+}
+
+.footer_text_link{
+    color:inherit;
+    text-decoration: inherit;
+    display: inherit;
+}
+
+.social_icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+.icon_holder{
+    margin-top: 35px;
+    margin-right: 50px;
+    float:right;
+    display: inline-block;
+    vertical-align:middle;
 }
