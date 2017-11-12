@@ -3,57 +3,43 @@
 }
 
 .nav_link_container{
-    margin-right:14px;
-    margin-top:19px;
-    display: inline-block;
-    float:right
+    margin:19px 14px 0 0;
+    float:right;
 }
 
-.top_nav {
+.nav_link_container a {
+    margin:0 0 5px 10px;
     color: white;
-    font-size: 85%;
-    width: 50px;
-    float: right;
-    text-align: center;
-    display: inline-block;
+    font-size: .95em;
     text-decoration:none;
-    padding-bottom:10px;
+    padding-bottom:16px;
 }
-.top_nav:hover{
+.nav_link_container a:hover{
     text-decoration:none;
     color:red;
     border-bottom: 8px solid darkred;
 }
 
 .page_title_header{
-    font-size:175%;
+    font-size:1.75em;
     color: white;
-    display: inline-block;
-    margin-top:16px;
-    margin-left: 36px;
     padding-bottom:5px;
 }
 
 .page_container{
-    position:relative;
     background-color: black;
     width: 960px;
-    height: 1185px;
-    margin-left: 25%;
+    margin: 0 auto;
+}
+
+.headers{
+    padding:16px 0 20px 36px;
 }
 
 .image_holder{
-    width:inherit;
     height:519px;
-    background-image:url('gti_frontend.jpg');
+    background:url('/images/gti_frontend.jpg') no-repeat center center;
     border-bottom: 8px solid darkred;
-}
-
-.background_img{
-    height:519px;
-    width:inherit;
-    object-position:center;
-    
 }
 
 .event_info{
@@ -64,9 +50,18 @@
     margin-left:50%;
     margin-bottom:50px;
     color:white;
-    text-align:justify right;
+    text-align:justify;
     margin-right:45px;
     margin-top:44px;
+}
+
+.event_title{
+    font-weight:bold; font-size: 1.25em
+
+}
+
+.event_info header{
+    font-size: 1.25em;
 }
 
 .signup_button{
@@ -93,6 +88,10 @@
     margin-bottom:50px;
     margin-right: 137px;
 }
+.event_photos h3{
+    color:white;
+}
+
 .small_pic{
     width:inherit;
     filter: grayscale(75%);
@@ -100,10 +99,9 @@
 
 .footer{
     background-color:silver;
-    width:inherit;
+    width:960px;
     height:97px;
-    bottom:0;
-    position:absolute;
+    bottom: 0;
 }
 
 .footer_text{
@@ -136,23 +134,24 @@
 }
 
 .overlay_title{
-    color:black;
-    background-color:darkgrey;
-    opacity:.5;
-    margin-left: 85px;
-    font-size:50px;
-    text-align:center;
+    display: inline-block;
+    width: auto;
+    color: black;
+    background-color: darkgrey;
+    opacity: .5;
+    margin: 83px 0  0 85px;
+    font-size: 50px;
+    text-align: center;
 }
 
 .overlay_description{
-    margin-left:85px;
-    margin-top:50px;
+    margin: 50px 0 0 85px;
 }
 
 .blueprint_button{
-    font-size:25px;
+    font-size: 25px;
     background-color: orange;
-    border:hidden;
+    border: hidden;
 }
 
 .blueprint_button:hover{
@@ -160,5 +159,13 @@
 }
 
 .blueprint_button:active{
-    background-color:gray
+    background-color: gray;
+}
+
+.clearfix {
+    overflow: auto;
+    visibility:hidden;
+    display:block;
+    height:0;
+    clear:both;
 }
