@@ -1,0 +1,219 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+.nav_link_container{
+    margin:19px 14px 0 0;
+    float:right;
+}
+
+.nav_link_container a {
+    margin:0 0 5px 10px;
+    color: white;
+    font-size: .95em;
+    text-decoration:none;
+    padding-bottom:16px;
+}
+.nav_link_container a:hover{
+    text-decoration:none;
+    color:red;
+    border-bottom: 8px solid darkred;
+}
+
+.page_title_header{
+    font-size:1.75em;
+    color: white;
+    padding-bottom:5px;
+}
+
+.page_container{
+    background-color: black;
+    width: 960px;
+    min-width:320px;
+    margin: 0 auto;
+}
+
+.headers{
+    padding:16px 0 20px 36px;
+}
+
+.image_holder{
+    height:519px;
+    background:url('/images/gti_frontend.jpg') no-repeat center center;
+    border-bottom: 8px solid darkred;
+    width: 100%;
+}
+
+.event_info{
+    float:right;
+    height:422px;
+    width: 250px;
+    display: inline-block;
+    margin-left:50%;
+    margin-bottom:50px;
+    color:white;
+    text-align:justify;
+    margin-right:45px;
+    margin-top:44px;
+}
+
+.event_title{
+    font-weight:bold; font-size: 1.25em
+
+}
+
+.event_info header{
+    font-size: 1.25em;
+}
+
+.signup_button{
+    width:250px;
+    background-color: orange;
+}
+
+.signup_button:hover{
+    background-color: brown;
+}
+
+.signup_button:active{
+    background-color:gray
+}
+
+.event_photos{
+    float:left;
+    position:absolute;
+    height:422px;
+    width:500px;
+    display: inline-block;
+    margin-left:35px;
+    margin-top: 55px;
+    margin-bottom:50px;
+    margin-right: 137px;
+}
+.event_photos h3{
+    color:white;
+}
+
+.small_pic{
+    width:inherit;
+    filter: grayscale(75%);
+}
+
+.footer{
+    background-color:silver;
+    width:960px;
+    height:97px;
+    bottom: 0;
+}
+
+.footer_text{
+    color:black;
+    text-decoration:none;
+    margin-top: 48px;
+    margin-left: 35px;
+    display: inline-block;
+}
+
+.footer_text_link{
+    color:inherit;
+    text-decoration: inherit;
+    display: inherit;
+}
+
+.social_icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+.icon_holder{
+    margin-top: 35px;
+    margin-right: 50px;
+    float:right;
+    display: inline-block;
+    vertical-align:middle;
+}
+
+.overlay_title{
+    display: inline-block;
+    width: auto;
+    color: black;
+    background-color: darkgrey;
+    opacity: .5;
+    margin: 83px 0  0 85px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.overlay_description{
+    margin: 50px 0 0 85px;
+}
+
+.blueprint_button{
+    font-size: 25px;
+    background-color: orange;
+    border: hidden;
+}
+
+.blueprint_button:hover{
+    background-color: brown;
+}
+
+.blueprint_button:active{
+    background-color: gray;
+}
+
+.clearfix {
+    overflow: auto;
+    visibility:hidden;
+    display:block;
+    height:0;
+    clear:both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width:960px)
+{
+    .page_container, .headers, .image_holder, .overlay_description, .blueprint_button, .event_title, .footer, .small_pic
+    {
+        width:100%;
+        max-width:320px;
+        align-content:center;
+    }
+    
+    .page_title_header
+    {
+        align-content:center;
+    }
+
+    .event_info
+    {
+        display: inline-block;
+        align-content:center;
+        margin-left:50%;
+        margin-bottom:50px;
+        color:white;
+        text-align:justify;
+        margin-right:45px;
+        margin-top:50px;
+    }
+
+    .event_photos
+    {
+        display: inline-block;
+    }
+
+    .signup_button
+    {
+        max-width:240px;
+        max-height:40px;
+    }
+}
