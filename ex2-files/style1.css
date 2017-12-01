@@ -90,9 +90,9 @@ body {
     width:500px;
     display: inline-block;
     margin-left:35px;
-    margin-top: 55px;
+    margin-top:55px;
     margin-bottom:50px;
-    margin-right: 137px;
+    margin-right:137px;
 }
 .event_photos h3{
     color:white;
@@ -176,17 +176,24 @@ body {
     clear:both;
 }
 
+.mobile_view, .menu_dropdown
+{
+    visibility:hidden;
+    height:0;
+    width:0;
+}
+
 * {
     box-sizing: border-box;
 }
 
 @media only screen and (max-width:960px)
 {
-    .page_container, .headers, .image_holder, .overlay_description, .blueprint_button, .event_title, .footer, .small_pic
+    .page_container, .page_title_header, .headers, .image_holder, .overlay_description, .blueprint_button, .event_title, .footer, .event_photos, .mobile_view, .small_pic
     {
         width:100%;
+        height:auto;
         max-width:320px;
-        align-content:center;
     }
     
     .page_title_header
@@ -198,22 +205,52 @@ body {
     {
         display: inline-block;
         align-content:center;
-        margin-left:50%;
-        margin-bottom:50px;
         color:white;
         text-align:justify;
-        margin-right:45px;
-        margin-top:50px;
+        //margin:50px 45px 50px 50%;
     }
 
-    .event_photos
+    .small_pic
     {
         display: inline-block;
+        height:auto;
+        align-self:center;
+        margin-top:10px;
     }
 
     .signup_button
     {
         max-width:240px;
         max-height:40px;
+    }
+
+    .desktop_view, .nav_link_container
+    {
+        visibility:hidden;
+        height:0;
+        width:0;
+    }
+
+    .mobile_view, .menu_dropdown
+    {
+        visibility:visible;
+    }
+
+    .event_photos
+    {
+        align-self:center;
+        display: inline-block;
+        margin:0 0 0 0;
+        position:relative;
+    }
+
+    .overlay_description
+    {
+        margin:100px 0 0 0;
+    }
+
+    .overlay_title
+    {
+        margin:10% 0 0 5%;
     }
 }
