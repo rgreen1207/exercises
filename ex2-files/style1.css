@@ -51,14 +51,11 @@ body {
 .event_info{
     float:right;
     height:422px;
-    width: 250px;
+    width:250px;
     display: inline-block;
-    margin-left:50%;
-    margin-bottom:50px;
+    margin:44px 45px 50px 480px;
     color:white;
     text-align:justify;
-    margin-right:45px;
-    margin-top:44px;
 }
 
 .event_title{
@@ -89,10 +86,7 @@ body {
     height:422px;
     width:500px;
     display: inline-block;
-    margin-left:35px;
-    margin-top:55px;
-    margin-bottom:50px;
-    margin-right:137px;
+    margin:55px 137px 50px 35px;
 }
 .event_photos h3{
     color:white;
@@ -176,7 +170,7 @@ body {
     clear:both;
 }
 
-.mobile_view, .menu_dropdown
+.menu_dropdown, .mobile_view_text
 {
     visibility:hidden;
     height:0;
@@ -190,11 +184,10 @@ body {
 
 @media only screen and (max-width:960px)
 {
-    .page_container, .page_title_header, .headers, .image_holder, .overlay_description, .blueprint_button, .event_title, .footer, .event_photos, .mobile_view, .small_pic
+    .page_container, .page_title_header, .headers, .image_holder, .overlay_description, .blueprint_button, .event_title, .footer, .event_photos, .small_pic, .mobile_view_text, .event_info, .icon_holder, .footer, .mobile_view_text
     {
         width:100%;
         height:auto;
-        max-width:320px;
     }
     
     .page_title_header
@@ -202,13 +195,27 @@ body {
         align-content:center;
     }
 
+    .event_photos
+    {
+        margin:0 0 0 0;
+        align-self:center;
+        display: inline-block;
+        position:relative;
+    }
+
+    .mobile_view_text
+    {
+        height:auto;
+        text-align:center;
+    }
+
     .event_info
     {
         display: inline-block;
-        align-content:center;
-        color:white;
         text-align:justify;
-        //margin:50px 45px 50px 50%;
+        color:white;
+        margin:0 0 0 0;
+        padding:0 30px 0 30px;
     }
 
     .small_pic
@@ -221,8 +228,11 @@ body {
 
     .signup_button
     {
-        max-width:240px;
-        max-height:40px;
+        position:center;
+        align-self:center;
+        margin-bottom:20px;
+        width:75%;
+        height:auto;
     }
 
     .desktop_view, .nav_link_container
@@ -232,19 +242,10 @@ body {
         width:0;
     }
 
-    .mobile_view, .menu_dropdown
+    .mobile_view_text, .menu_dropdown
     {
         visibility:visible;
     }
-
-    .event_photos
-    {
-        align-self:center;
-        display: inline-block;
-        margin:0 0 0 0;
-        position:relative;
-    }
-
     .overlay_description
     {
         margin:100px 0 0 0;
@@ -253,5 +254,28 @@ body {
     .overlay_title
     {
         margin:10% 0 0 5%;
+    }
+
+    .footer{
+        height:auto;
+        display:inline-block;
+    }
+
+    .footer_text{
+        text-align:center;
+        margin:30px 0 0 0;
+    }
+
+    .social_icon{
+        width:10%;
+        height:auto;
+        margin:0 0 0 20px;
+    }
+    
+    .icon_holder{
+        position:center;
+        display:inline-block;
+        margin:20px 0 0 0;
+        height:auto;
     }
 }
