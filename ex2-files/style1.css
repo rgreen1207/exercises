@@ -170,12 +170,11 @@ body {
     clear:both;
 }
 
-.menu_dropdown, .mobile_view_text
+.menu_dropdown, .mobile_view_text, .menu_drop_button, .menu_drop_button_holder, .drop_menu
 {
     visibility:hidden;
     height:0;
     width:0;
-    float:right;
 }
 
 * {
@@ -228,10 +227,10 @@ body {
 
     .signup_button
     {
-        position:center;
-        align-self:center;
+        display:inline-block;
+        text-align:center;
         margin-bottom:20px;
-        width:75%;
+        width:50%;
         height:auto;
     }
 
@@ -242,10 +241,42 @@ body {
         width:0;
     }
 
-    .mobile_view_text, .menu_dropdown
+    .mobile_view_text, .menu_dropdown, .menu_drop_button, .menu_drop_button_holder
     {
         visibility:visible;
     }
+
+    .menu_dropdown
+    {
+        margin:0 20px 0 0;
+        float:right;
+        background:red;
+        display:inline-block;
+    }
+
+    .menu_drop_button_holder {
+        width:5%;
+        min-width:30px;
+        height:auto;
+        float:right;
+        background-color:black;
+        border:none;
+        margin: 0 20px 0 0;
+    }
+
+    .menu_drop_button:active{
+        background-color:grey;
+    }
+
+    .menu_drop_button
+    {
+        width:100%;
+        min-width:30px;
+        height:auto;
+        display:inline-block;
+        text-align:center;
+    }
+
     .overlay_description
     {
         margin:100px 0 0 0;
@@ -259,10 +290,10 @@ body {
     .footer{
         height:auto;
         display:inline-block;
+        text-align:center;
     }
 
     .footer_text{
-        text-align:center;
         margin:30px 0 0 0;
     }
 
@@ -275,7 +306,39 @@ body {
     .icon_holder{
         position:center;
         display:inline-block;
+        text-align:center;
         margin:20px 0 0 0;
         height:auto;
     }
+
+   .dropdown_container{
+       text-align:center;
+       height:auto;
+       width:100%;
+       display:inline-block;
+       
+       visibility:visible;
+    }
+
+   .drop_menu
+   {
+       background-color:black;
+       color:white;
+       height:inherit;
+       width:100%;
+       text-decoration:none;
+       list-style:none;
+       text-align:center;
+       display:inline-block;
+
+       visibility:visible;
+   }
+
+   .drop_menu li, .drop_menu a{
+       margin-bottom:5px;
+       width:100%;
+       height:auto;
+
+       visibility:visible;
+   }
 }
