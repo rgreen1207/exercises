@@ -7,7 +7,3 @@ window.onclick = function (event) {
         document.getElementById("drop_menu").classList.remove('show');
     }
 }
-
-window.screen.width = function (event) {
-    document.getElementById("drop_menu").classList.remove('show');
-}
