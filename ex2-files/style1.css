@@ -58,11 +58,10 @@ body {
 }
 
 .event_info {
-  float: right;
   height: 422px;
   width: 250px;
   display: inline-block;
-  margin: 44px 45px 50px 480px;
+  margin: 44px 0px 50px 50px;
   color: white;
   text-align: justify;
 }
@@ -92,11 +91,10 @@ body {
 
 .event_photos {
   float: left;
-  position: absolute;
   height: 422px;
   width: 500px;
   display: inline-block;
-  margin: 55px 137px 50px 35px;
+  margin: 25px 50px 50px 35px;
 }
 
 .event_photos h3 {
@@ -108,7 +106,7 @@ body {
   filter: grayscale(75%);
 }
 
-.footer {
+footer {
   background-color: silver;
   width: 960px;
   height: 97px;
@@ -181,7 +179,7 @@ body {
   clear: both;
 }
 
-.dropdown, .mobile_view_text, .menu_drop_button {
+.mobile_content {
   visibility: hidden;
   height: 0;
   width: 0;
@@ -192,7 +190,7 @@ body {
 }
 
 @media only screen and (max-width: 960px) {
-  .page_container, .headers, .image_holder, .overlay_description, .blueprint_button, .event_title, .footer, .event_photos, .small_pic, .mobile_view_text, .event_info, .icon_holder, .footer, .mobile_view_text {
+  .mobile_view {
     width: 100%;
     height: auto;
   }
@@ -202,7 +200,7 @@ body {
   }
 
   .event_photos {
-    margin: 0 0 0 0;
+    margin: 0;
     align-self: center;
     display: inline-block;
     position: relative;
@@ -217,8 +215,8 @@ body {
     display: inline-block;
     text-align: justify;
     color: white;
-    margin: 0 0 0 0;
-    padding: 0 30px 0 30px;
+    margin: 0;
+    padding: 15px 30px;
   }
 
   .small_pic {
@@ -237,12 +235,12 @@ body {
   }
 
   .desktop_view, .nav_link_container {
-    visibility: hidden;
+    display:none;
     height: 0;
     width: 0;
   }
 
-  .mobile_view_text, .dropdown, .menu_drop_button, .menu_drop_button_holder {
+  .mobile_content {
     visibility: visible;
   }
 
