@@ -1,0 +1,339 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  background-color: gray;
+}
+
+.nav_link_container {
+  margin: 19px 14px 0 0;
+  float: right;
+}
+
+.nav_link_container a {
+  margin: 0 0 5px 10px;
+  color: white;
+  font-size: .95em;
+  text-decoration: none;
+  padding-bottom: 16px;
+}
+
+.nav_link_container a:hover {
+  text-decoration: none;
+  color: red;
+  border-bottom: 8px solid darkred;
+}
+
+.page_title_header {
+  font-size: 1.75em;
+  color: white;
+  padding-bottom: 5px;
+}
+
+.page_container {
+  background-color: black;
+  width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.headers {
+  padding: 16px 0 20px 36px;
+}
+
+.image_holder {
+  height: 519px;
+  background: url('./images/gti_frontend.jpg') no-repeat center center;
+  border-bottom: 8px solid darkred;
+  width: 100%;
+}
+
+.event_info {
+  height: 422px;
+  width: 250px;
+  display: inline-block;
+  margin: 44px 0px 50px 50px;
+  color: white;
+  text-align: justify;
+}
+
+.event_title {
+  font-weight: bold;
+  font-size: 1.25em
+
+}
+
+.event_info header {
+  font-size: 1.25em;
+}
+
+.signup_button {
+  width: 250px;
+  background-color: orange;
+}
+
+.signup_button:hover {
+  background-color: brown;
+}
+
+.signup_button:active {
+  background-color: gray
+}
+
+.event_photos {
+  float: left;
+  height: 422px;
+  width: 500px;
+  display: inline-block;
+  margin: 25px 50px 50px 35px;
+}
+
+.event_photos h3 {
+  color: white;
+}
+
+.small_pic {
+  width: inherit;
+  filter: grayscale(75%);
+}
+
+footer {
+  background-color: silver;
+  width: 960px;
+  height: 97px;
+  bottom: 0;
+}
+
+.footer_text {
+  color: black;
+  text-decoration: none;
+  margin-top: 48px;
+  margin-left: 35px;
+  display: inline-block;
+}
+
+.footer_text_link {
+  color: inherit;
+  text-decoration: inherit;
+  display: inherit;
+}
+
+.social_icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 30px;
+}
+
+.icon_holder {
+  margin-top: 35px;
+  margin-right: 50px;
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.overlay_title {
+  display: inline-block;
+  width: auto;
+  color: black;
+  background-color: darkgrey;
+  opacity: .5;
+  margin: 83px 0 0 85px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.overlay_description {
+  margin: 50px 0 0 85px;
+}
+
+.blueprint_button {
+  font-size: 25px;
+  background-color: orange;
+  border: hidden;
+}
+
+.blueprint_button:hover {
+  background-color: brown;
+}
+
+.blueprint_button:active {
+  background-color: gray;
+}
+
+.clearfix {
+  overflow: auto;
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.mobile_content {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.drop_menu {
+  display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  .mobile_view {
+    width: 100%;
+    height: auto;
+  }
+
+  .page_title_header {
+    align-content: center;
+  }
+
+  .event_photos {
+    margin: 0;
+    align-self: center;
+    display: inline-block;
+    position: relative;
+  }
+
+  .mobile_view_text {
+    height: auto;
+    text-align: center;
+  }
+
+  .event_info {
+    display: inline-block;
+    text-align: justify;
+    color: white;
+    margin: 0;
+    padding: 15px 30px;
+  }
+
+  .small_pic {
+    display: inline-block;
+    height: auto;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .signup_button {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 50%;
+    height: auto;
+  }
+
+  .desktop_view, .nav_link_container {
+    display:none;
+    height: 0;
+    width: 0;
+  }
+
+  .mobile_content {
+    visibility: visible;
+  }
+
+  .overlay_description {
+    margin: 100px 0 0 0;
+  }
+
+  .overlay_title {
+    margin: 10% 0 0 5%;
+  }
+
+  .footer {
+    height: auto;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .footer_text {
+    margin: 30px 0 0 0;
+  }
+
+  .social_icon {
+    width: 10%;
+    height: auto;
+    margin: 0 0 0 20px;
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  .icon_holder {
+    position: center;
+    display: inline-block;
+    text-align: center;
+    margin: 20px 0 0 0;
+    height: auto;
+  }
+
+  .page_title_header {
+    width: 50%;
+    height: 100%
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    height: auto;
+    width: 10%;
+    float: right;
+    text-align: center;
+  }
+
+  .menu_drop_button_holder {
+    height: auto;
+    width: 50%;
+    min-width: 35px;
+    min-height: 35px;
+    float: right;
+    background-color: black;
+    border: none;
+  }
+
+  .menu_drop_button {
+    width: 100%;
+    height: auto;
+  }
+
+  .drop_menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: black;
+    opacity: .75;
+    text-align: center;
+    min-width: 75px;
+    z-index: 1;
+  }
+
+  .drop_menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 20px;
+  }
+
+  .drop_menu a:hover {
+    background-color: darkgray;
+    color: darkred;
+  }
+
+  .show {
+    display: block;
+  }
+}
