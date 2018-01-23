@@ -55,6 +55,7 @@ body {
   background: url('./images/gti_frontend.jpg') no-repeat center center;
   border-bottom: 8px solid darkred;
   width: 100%;
+  display: inline-block;
 }
 
 .event_info {
@@ -69,7 +70,6 @@ body {
 .event_title {
   font-weight: bold;
   font-size: 1.25em
-
 }
 
 .event_info header {
@@ -187,6 +187,37 @@ footer {
 
 .drop_menu {
   display: none;
+}
+
+.slider_button{
+
+}
+
+.slider_start_button{
+
+}
+
+.slider_stop_button{
+
+}
+
+.slider_button, .slider_stop_button, .slider_start_button:hover{
+
+}
+
+.slider_position{
+
+}
+
+.slider_postion:hover{
+
+}
+
+.image_preview{
+  height: 200px;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 8px solid darkred;
 }
 
 @media only screen and (max-width: 960px) {
