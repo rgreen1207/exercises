@@ -23,7 +23,7 @@
           "title": "GTI Frontend"
       },
       {
-          "img": "./images/roccos",
+          "img": "./images/roccos.jpg",
           "title": "Roccos Rollout"
       },
       {
