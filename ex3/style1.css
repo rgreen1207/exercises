@@ -195,7 +195,6 @@ footer {
     max-height: 85px;
     max-width: 144px;
     text-align: center;
-    vertical-align:central;
     margin: 50px 7px 0 7px;
     filter: grayscale(75%);
 }
@@ -204,7 +203,6 @@ footer {
     width: 20%;
     height: auto;
     text-align: center;
-    vertical-align:central;
     margin: 25px 7px 0 7px;
     filter: grayscale(75%);
 }
