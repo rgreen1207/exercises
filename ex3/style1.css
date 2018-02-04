@@ -52,7 +52,7 @@ body {
 
 .image_holder {
   height: 519px;
-  background: url('./images/gti_frontend.jpg') no-repeat center center;
+  background: no-repeat center center;
   border-bottom: 8px solid darkred;
   width: 100%;
   display: inline-block;
