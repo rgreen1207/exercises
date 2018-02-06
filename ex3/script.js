@@ -75,6 +75,9 @@
             };
         });
         main_img.style.backgroundImage = "url(" + center_img.src + ")";
-        setTimeout(slide_images(counter), 2000);
+        //setTimeout(slide_images(counter), 2000);
+        setTimeout(function() {
+            slide_images(counter);
+        }, 2000);
     };
 })();
