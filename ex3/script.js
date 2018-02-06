@@ -75,8 +75,6 @@
 
     function slide_images(counter) {
         img_array.forEach(function (item) {
-            //console.log(images.slider_images[counter].img);
-            console.log(counter);
             item.src = images.slider_images[counter].img;
             counter++;
             if (counter > (images.slider_images.length - 1)) {
@@ -84,7 +82,6 @@
             };
         });
         main_img.style.backgroundImage = "url(" + center_img.src + ")";
-        //setTimeout(slide_images(counter), 2000);
     };
 
     slide_images(counter);
