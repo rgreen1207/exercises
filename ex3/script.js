@@ -56,34 +56,36 @@
     var img_array = [img_holder_0, img_holder_1, center_img, img_holder_3, img_holder_4];
     var main_img = document.getElementById("main_image")
     var counter = 0;
-    window.onload = function () {
+    function load_images() {
         count = 0
-        img_array.forEach(function(item) {
+        img_array.forEach(function (item) {
             item.src = images.slider_images[count].img;
             count++;
         });
         main_img.style.backgroundImage = "url(" + center_img.src + ")";
         setInterval(function(){
-                    slide_images(counter);
-                    counter++;
-                    if( counter > images.slider_images.length - 1) {
-                        counter = 0;
-                    }
-        },2000);
+            slide_images(counter);
+            counter++;
+            if( counter > images.slider_images.length - 1) {
+                counter = 0;
+            }
+        },5000);
     };
+    load_images();
 
     function slide_images(counter) {
         img_array.forEach(function (item) {
+            //console.log(images.slider_images[counter].img);
+            console.log(counter);
             item.src = images.slider_images[counter].img;
             counter++;
-            if (counter > images.slider_imageslenth) {
-                counter = (images.slider_images.length - 1);
+            if (counter > (images.slider_images.length - 1)) {
+                counter = 0;
             };
         });
         main_img.style.backgroundImage = "url(" + center_img.src + ")";
         //setTimeout(slide_images(counter), 2000);
-        setTimeout(function() {
-            slide_images(counter);
-        }, 2000);
     };
+
+    slide_images(counter);
 })();
