@@ -63,14 +63,20 @@
             count++;
         });
         main_img.style.backgroundImage = "url(" + center_img.src + ")";
-        slide_images(counter);
+        setInterval(function(){
+                    slide_images(counter);
+                    counter++;
+                    if( counter > images.slider_images.length - 1) {
+                        counter = 0;
+                    }
+        },2000);
     };
 
     function slide_images(counter) {
         img_array.forEach(function (item) {
             item.src = images.slider_images[counter].img;
-            counter = counter - 1;
-            if (counter < 0) {
+            counter++;
+            if (counter > images.slider_imageslenth) {
                 counter = (images.slider_images.length - 1);
             };
         });
