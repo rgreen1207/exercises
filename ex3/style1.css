@@ -208,7 +208,7 @@ footer {
 }
 
 .image_preview{
-  height: 208px;
+  height: 240px;
   width: 100%;
   display: inline-block;
   border-bottom: 8px solid darkred;
@@ -216,7 +216,17 @@ footer {
 
 .play_container{
     width: 100%;
-    height: 42px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+}
+
+.start_stop_button, .start_stop_button img{
+    width: 100%;
+    height: auto;
+    max-height: 75px;
+    max-width: 75px;
+    text-align: center;
 }
 
 .queue_holder{
