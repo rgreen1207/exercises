@@ -78,12 +78,9 @@
 
     function slide_images(counter) {
         img_array.forEach(function (item) {
-            if (counter > (images.slider_images.length - 1)) {
-                counter = -1 + (counter - (images.slider_images.length - 1));
+            if ((counter == images.slider_images.length) || (counter < 0)) {
+                counter = counter % images.slider_images.length;
             }
-            else if (counter < 0) {
-                counter = images.slider_images.length + counter;
-            };
             item.src = images.slider_images[counter].img;
             counter++;
         });

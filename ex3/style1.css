@@ -369,6 +369,32 @@ footer {
     color: darkred;
   }
 
+.image_queue img, .image_queue{
+    width: 25%;
+    height: auto;
+    max-height: 85px;
+    max-width: 144px;
+    text-align: center;
+    margin: 50px 7px 0 7px;
+    filter: grayscale(75%);
+}
+
+.image_current, .image_current img{
+    width: 30%;
+    height: auto;
+    max-height: 115px;
+    max-width: 180px;
+    text-align: center;
+    margin: 25px 7px 0 7px;
+    filter: grayscale(75%);
+}
+
+.image_preview{
+    width: 100%;
+    height: auto;
+}
+
+
   .show {
     display: block;
   }
