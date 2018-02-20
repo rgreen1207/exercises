@@ -55,6 +55,7 @@
     var img_holder_4 = document.getElementById("img_4");
     var img_array = [img_holder_0, img_holder_1, center_img, img_holder_3, img_holder_4];
     var main_img = document.getElementById("main_image");
+    var strtstpbtn = document.getElementById("play_pause_btn");
     var counter = 0;
 
     var slideTimer = setInterval(function () {
@@ -76,35 +77,61 @@
     };
     load_images();
 
-    function slide_images(counter) {
+    function slide_images(img_pos) {
         img_array.forEach(function (item) {
-            if ((counter == images.slider_images.length) || (counter < 0)) {
-                counter = counter % images.slider_images.length;
-            }
-            item.src = images.slider_images[counter].img;
-            counter++;
+            img_pos = check_array_index(img_pos)
+            item.src = images.slider_images[img_pos].img;
+            img_pos++;
         });
         main_img.style.backgroundImage = "url(" + center_img.src + ")";
     };
 
     img_holder_0.addEventListener("click", function () {
         slide_images(counter = counter - 2);
-        clearInterval(slideTimer);
+        counter = check_array_index(counter);
     });
 
     img_holder_1.addEventListener("click", function () {
         slide_images(counter--);
-        clearInterval(slideTimer);
+        counter = check_array_index(counter);
     });
 
     img_holder_3.addEventListener("click", function () {
         slide_images(counter++);
-        clearInterval(slideTimer);
+        counter = check_array_index(counter);
     });
 
     img_holder_4.addEventListener("click", function () {
         slide_images(counter = counter + 2);
-        clearInterval(slideTimer);
+        counter = check_array_index(counter);
     });
 
+    function check_array_index(index) {
+        if ((index == images.slider_images.length) || (index < 0)) {
+            index = index % images.slider_images.length;
+        }
+        return index;
+    };
+
+    var play = true;
+
+    strtstpbtn.addEventListener("click", function () {
+        console.log(play);
+        if(play == true){
+            clearInterval(slideTimer);
+            play = false;
+        }
+        else {
+            play = true;
+            slide_images(counter++);
+            counter = check_array_index(counter);
+            slideTimer = setInterval(function () {
+                if (counter > images.slider_images.length - 1) {
+                    counter = 0;
+                }
+                slide_images(counter);
+                counter++;
+            }, 5000);
+        }
+    });
 })();

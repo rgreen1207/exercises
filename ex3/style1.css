@@ -56,6 +56,7 @@ body {
   border-bottom: 8px solid darkred;
   width: 100%;
   display: inline-block;
+  position: relative;
 }
 
 .event_info {
@@ -208,17 +209,20 @@ footer {
 }
 
 .image_preview{
-  height: 240px;
+  height: 200px;
   width: 100%;
   display: inline-block;
+  vertical-align: central;
   border-bottom: 8px solid darkred;
 }
 
 .play_container{
     width: 100%;
-    height: 100px;
-    text-align: center;
+    height: 75px;
+    text-align: right;
     display: inline-block;
+    position: absolute;
+    bottom: 20px;
 }
 
 .start_stop_button, .start_stop_button img{
@@ -227,6 +231,7 @@ footer {
     max-height: 75px;
     max-width: 75px;
     text-align: center;
+    margin-right: 10px;
 }
 
 .queue_holder{
