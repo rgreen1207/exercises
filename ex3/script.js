@@ -15,6 +15,22 @@
         if (!event.target.matches('.menu_drop_button_holder') && !event.target.matches('.menu_drop_button')) {
             menu.classList.remove(s.showClassName);
         }
+        if (event.target.matches('.side_img')) {
+            console.log(event.target.id);
+            if (event.target.id == "img_0") {
+                slide_images(counter = counter - 2);
+            }
+            else if (event.target.id == "img_1") {
+                slide_images(counter--);
+            }
+            else if (event.target.id == "img_3") {
+                slide_images(counter++);
+            }
+            else if (event.target.id == "img_4") {
+                slide_images(counter = counter + 2);
+            }
+            counter = check_array_index(counter);
+        }
     }
 
     var images = {
@@ -57,6 +73,7 @@
     var main_img = document.getElementById("main_image");
     var strtstpbtn = document.getElementById("play_pause_btn");
     var counter = 0;
+    var play = true;
 
     var slideTimer = setInterval(function () {
         if (counter > images.slider_images.length - 1) {
@@ -86,34 +103,12 @@
         main_img.style.backgroundImage = "url(" + center_img.src + ")";
     };
 
-    img_holder_0.addEventListener("click", function () {
-        slide_images(counter = counter - 2);
-        counter = check_array_index(counter);
-    });
-
-    img_holder_1.addEventListener("click", function () {
-        slide_images(counter--);
-        counter = check_array_index(counter);
-    });
-
-    img_holder_3.addEventListener("click", function () {
-        slide_images(counter++);
-        counter = check_array_index(counter);
-    });
-
-    img_holder_4.addEventListener("click", function () {
-        slide_images(counter = counter + 2);
-        counter = check_array_index(counter);
-    });
-
     function check_array_index(index) {
         if ((index == images.slider_images.length) || (index < 0)) {
             index = index % images.slider_images.length;
         }
         return index;
     };
-
-    var play = true;
 
     strtstpbtn.addEventListener("click", function () {
         console.log(play);
