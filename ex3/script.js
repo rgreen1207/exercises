@@ -114,7 +114,7 @@
             clearInterval(slideTimer);
             var elm_ind = img_holders.indexOf(element);
             if (elm_ind == 0 || elm_ind == 1) {
-                slide_images(counter = counter - elm_ind);
+                slide_images(counter = counter + (elm_ind - 2));
             }
             else {
                 slide_images(counter = counter + (elm_ind - 1));
