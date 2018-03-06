@@ -89,8 +89,11 @@
     };
 
     function check_array_index(index) {
-        if ((index >= images.slider_images.length) || (index < 0)) {
+        if (index >= images.slider_images.length) {
             index = index % images.slider_images.length;
+        }
+        else if (index < 0) {
+            index = images.slider_images.length - Math.abs(index);
         }
         return index;
     };
