@@ -30,5 +30,18 @@ JavaScript Image Slider
 * Bonus: make it work on mobile (touch events)
 * Bonus: play / pause mode
 
+
+## Exercise 4: ##
+
+setting up local development environment
+Each of the following steps can have its own PR, so we do it incrementally.
+
+* We will add node.js and webpack to our workflow
+* Run a local webpack dev server which will serve your files
+* Create a build script that will minify the js and css, create a build folder and copy the final files there (remember to .gitignore that folder)
+* Add babel to transpile ES6 to ES5
+* Transpile scss to css
+ 
+
 Good Luck!
 
