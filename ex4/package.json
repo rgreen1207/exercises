@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d lib",
+    "build": "babel src -d dist",
     "sass": "node-sass -w sass/ -o css/"
   },
   "keywords": [],
