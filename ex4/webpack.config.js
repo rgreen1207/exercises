@@ -26,9 +26,13 @@ module.exports = {
       }
     ]
   },
-  entry: './src/index.js',
+  entry: {
+    './src/index.js',
+    './src/images/*,
+    './src/style1.css'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name]',
     path: path.resolve(__dirname, 'dist')
   }
 };
