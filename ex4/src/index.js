@@ -1,4 +1,7 @@
-﻿(function () {
+﻿import css from './style1.css';
+console.log(css);
+
+(function () {
 
   var s = {
     menu: document.getElementById("drop_menu"),

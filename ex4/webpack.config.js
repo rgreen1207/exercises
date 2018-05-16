@@ -1,4 +1,7 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
@@ -11,28 +14,53 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         use: [
+          'file-loader',
           {
-            loader: 'file-loader',
-            options: {}
-          }
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true,
+              mozjpeg: {
+                quality: 65
+              },
+              pngquant: {
+                quality: '65-90'
+              }
+            },
+          },
         ]
       },
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader'
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              root: path.resolve(__dirname, 'dist'),
+              minimize: true
+            }
+          }
         ]
       }
     ]
   },
-  entry: {
-    './src/index.js',
-    './src/images/*,
-    './src/style1.css'
-  },
+
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new CopyWebpackPlugin([
+        {from: 'src/images', to: 'images'}
+      ]
+    ),
+    new HtmlWebpackPlugin({
+        template: './src/index.html'
+      }
+    )
+  ],
+  entry: './src/index.js',
   output: {
-    filename: '[name]',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   }
 };
