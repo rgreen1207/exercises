@@ -36,14 +36,29 @@ JavaScript Image Slider
 setting up local development environment
 Each of the following steps can have its own PR, so we do it incrementally.
 
-Command: 
-./node_modules/.bin/webpack-dev-server script.js
-
 * We will add node.js and webpack to our workflow
 * Run a local webpack dev server which will serve your files
 * Create a build script that will minify the js and css, create a build folder and copy the final files there (remember to .gitignore that folder)
 * Add babel to transpile ES6 to ES5
 * Transpile scss to css
+
+
+## Exercise 5: ##
+
+React. 
+We will create an accordion component using react.
+* The accordion can have one or many items. 
+* Each item has a title and a description.
+* When the item is collapsed, only the title should be visible.
+* when another item is opened, the first should close.
+* Should function like https://jqueryui.com/accordion/ (don't worry about the animations yet). 
+
+Note: I installed https://github.com/facebook/create-react-app on folder `/ex5`. to start:
+```
+cd ex5
+yarn install
+yarn start
+```
  
 
 Good Luck!
