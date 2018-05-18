@@ -61,7 +61,7 @@ console.log(css);
   }
 
   function load_images() {
-    count = 0;
+    var count = 0;
     for (var i = 0; i < s.imgArray.length; i++) {
       count = place_images(i, count);
     }
