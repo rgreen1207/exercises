@@ -4,36 +4,39 @@ import './index.css';
 class Section extends React.Component {
   constructor(props) {
     super(props);
-    this.handleCloseClick = this.handleCloseClick.bind(this);
-    this.handleOpenClick = this.handleOpenClick.bind(this);
     this.state = {
       isClosed: true,
-      myClass: 'close'
     };
   }
-  handleOpenClick() {
+  componentWillReceiveProps = (nextProps) => {
+    if(!nextProps.isClosed){
+      nextProps.state = {
+        isClosed: true
+      }
+    }
+  };
+
+  toggleOpen = () => {
+    const isClosed = this.state.isClosed;
+    if(isClosed) {
+      this.props.callback(this.props.id);
+    }
+
     this.setState({
-      isClosed: false,
-      myClass: ' '
+      isClosed: !isClosed,
     });
-  }
-  handleCloseClick(){
-    this.setState({
-      isClosed: true,
-      myClass: 'close'
-    });
-  }
+  };
+
   render() {
-    const isOpen = this.state.isClosed;
     return (
       <div>
-        <button onClick={isOpen ? (this.handleOpenClick) : (this.handleCloseClick)}>
+        <button onClick={this.toggleOpen}>
           <div>
             {this.props.title}
           </div>
         </button>
         <div>
-          <div className={this.state.myClass}>
+          <div className={this.state.isClosed ? 'close' : ''}>
             {this.props.children}
           </div>
         </div>
@@ -43,3 +46,4 @@ class Section extends React.Component {
 }
 
 export default Section;
+
