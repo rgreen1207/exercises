@@ -6,7 +6,7 @@ class Accordion extends React.Component {
     openSection: true
   };
 
-  sectionOpenCallback = (sectionId) =>{
+  sectionOpenCallback = (sectionId) => {
     this.setState({
       openSection: sectionId
     })
@@ -19,7 +19,7 @@ class Accordion extends React.Component {
         <Section title="One" id={1} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           一 (ichi)
         </Section>
-        <Section title="Two" id={2}  callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+        <Section title="Two" id={2} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           二 (ni)
         </Section>
         <Section title="Three" id={3} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
@@ -28,22 +28,22 @@ class Accordion extends React.Component {
         <Section title="Four" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           四 (shi/yon)
         </Section>
-        <Section title="Five" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+        <Section title="Five" id={5} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           五 (go)
         </Section>
-        <Section title="Six" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+        <Section title="Six" id={6} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           六 (roku)
         </Section>
-        <Section title="Seven" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+        <Section title="Seven" id={7} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           七 (shichi/nana)
         </Section>
-        <Section title="Eight" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+        <Section title="Eight" id={8} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           八 (hachi)
         </Section>
-        <Section title="Nine" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+        <Section title="Nine" id={9} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           九 (kyū/ku)
         </Section>
-        <Section title="Ten" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+        <Section title="Ten" id={10} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
           十 (jū)
         </Section>
 

@@ -8,8 +8,9 @@ class Section extends React.Component {
       isClosed: true,
     };
   }
+
   componentWillReceiveProps = () => {
-    if(this.state.isClosed === false){
+    if (this.state.isClosed === false) {
       this.setState({
         isClosed: true
       });
@@ -18,7 +19,7 @@ class Section extends React.Component {
 
   toggleOpen = () => {
     const isClosed = this.state.isClosed;
-    if(isClosed) {
+    if (isClosed) {
       this.props.callback(this.props.id);
     }
 
