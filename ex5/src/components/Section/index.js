@@ -8,11 +8,11 @@ class Section extends React.Component {
       isClosed: true,
     };
   }
-  componentWillReceiveProps = (nextProps) => {
-    if(!nextProps.isClosed){
-      nextProps.state = {
+  componentWillReceiveProps = () => {
+    if(this.state.isClosed === false){
+      this.setState({
         isClosed: true
-      }
+      });
     }
   };
 
@@ -30,7 +30,7 @@ class Section extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggleOpen}>
+        <button onClick={this.toggleOpen} className="buttonSelector">
           <div>
             {this.props.title}
           </div>

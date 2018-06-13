@@ -17,17 +17,36 @@ class Accordion extends React.Component {
       <div>
         <div>{this.props.title}</div>
         <Section title="One" id={1} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          1
+          一 (ichi)
         </Section>
         <Section title="Two" id={2}  callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          2
+          二 (ni)
         </Section>
         <Section title="Three" id={3} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          3
+          三 (san)
         </Section>
         <Section title="Four" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          4
+          四 (shi/yon)
         </Section>
+        <Section title="Five" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+          五 (go)
+        </Section>
+        <Section title="Six" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+          六 (roku)
+        </Section>
+        <Section title="Seven" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+          七 (shichi/nana)
+        </Section>
+        <Section title="Eight" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+          八 (hachi)
+        </Section>
+        <Section title="Nine" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+          九 (kyū/ku)
+        </Section>
+        <Section title="Ten" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
+          十 (jū)
+        </Section>
+
       </div>
     );
   }

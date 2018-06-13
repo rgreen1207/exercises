@@ -12,7 +12,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <Accordion title="This is Ryan's React Box"/>
+        <Accordion title="Learn to count to 10"/>
       </div>
     );
   }
