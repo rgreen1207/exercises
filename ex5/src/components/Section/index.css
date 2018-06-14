@@ -1,0 +1,11 @@
+.close{
+    display: none;
+}
+
+.buttonSelector{
+    width: 125px;
+    text-align: center;
+    background-color: lightcoral;
+    cursor: pointer;
+    color: white;
+}
