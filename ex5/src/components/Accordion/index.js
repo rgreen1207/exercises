@@ -1,52 +1,57 @@
 import React from "react";
 import Section from '../Section/index.js';
 
+const sectionList = [
+  {title: "One", text: "一 (ichi)"},
+  {title: "Two", text: "二 (ni)"},
+  {title: "Three", text: "三 (san)"},
+  {title: "Four", text: "四 (shi/yon)"},
+  {title: "Five", text: "五 (go)"},
+  {title: "Six", text: "六 (roku)"},
+  {title: "Seven", text: "七 (shichi/nana)"},
+  {title: "Eight", text: "八 (hachi)"},
+  {title: "Nine", text: "九 (kyū/ku)"},
+  {title: "Ten", text: "十 (jū)"}
+];
+
 class Accordion extends React.Component {
   state = {
-    openSection: true
+    openSectionById: -1
   };
 
+  constructor(props) {
+    super(props);
+    this.sectionOpenCallback = this.sectionOpenCallback.bind(this);
+  }
+
   sectionOpenCallback = (sectionId) => {
+    console.log(sectionId);
     this.setState({
-      openSection: sectionId
+      openSectionById: sectionId
     })
   };
+
+  openSection = (sectionId) => {
+    this.setState({
+      openSectionById: sectionId
+    })
+  };
+
+  sections = sectionList.map((section, i) => {
+    return <Section key={i}
+                    title={section.title}
+                    callback={() => this.sectionOpenCallback(i)}
+                    closeSection={i === this.state.openSectionById}
+                    sectionId = {i}>
+      {section.text}
+    </Section>
+  });
 
   render() {
     return (
       <div>
         <div>{this.props.title}</div>
-        <Section title="One" id={1} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          一 (ichi)
-        </Section>
-        <Section title="Two" id={2} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          二 (ni)
-        </Section>
-        <Section title="Three" id={3} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          三 (san)
-        </Section>
-        <Section title="Four" id={4} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          四 (shi/yon)
-        </Section>
-        <Section title="Five" id={5} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          五 (go)
-        </Section>
-        <Section title="Six" id={6} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          六 (roku)
-        </Section>
-        <Section title="Seven" id={7} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          七 (shichi/nana)
-        </Section>
-        <Section title="Eight" id={8} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          八 (hachi)
-        </Section>
-        <Section title="Nine" id={9} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          九 (kyū/ku)
-        </Section>
-        <Section title="Ten" id={10} callback={this.sectionOpenCallback} openSection={this.state.openSection}>
-          十 (jū)
-        </Section>
-
+        {this.sections}
       </div>
     );
   }
