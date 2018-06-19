@@ -16,7 +16,7 @@ class Section extends React.Component {
           </div>
         </button>
         <div>
-          <div className={this.props.closeSection ? '' : 'close'}>
+          <div className={this.props.openSection === this.props.sectionId ? '' : 'close'}>
             {this.props.children}
           </div>
         </div>

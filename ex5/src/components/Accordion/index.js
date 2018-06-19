@@ -16,42 +16,32 @@ const sectionList = [
 
 class Accordion extends React.Component {
   state = {
-    openSectionById: -1
+    openSection: false
   };
-
-  constructor(props) {
-    super(props);
-    this.sectionOpenCallback = this.sectionOpenCallback.bind(this);
-  }
 
   sectionOpenCallback = (sectionId) => {
-    console.log(sectionId);
     this.setState({
-      openSectionById: sectionId
-    })
+      openSection: this.state.openSection === sectionId ? false : sectionId
+    });
   };
 
-  openSection = (sectionId) => {
-    this.setState({
-      openSectionById: sectionId
-    })
-  };
-
-  sections = sectionList.map((section, i) => {
-    return <Section key={i}
-                    title={section.title}
-                    callback={() => this.sectionOpenCallback(i)}
-                    closeSection={i === this.state.openSectionById}
-                    sectionId = {i}>
-      {section.text}
-    </Section>
-  });
+  sectionJSX = () => {
+    return sectionList.map((section, i) => {
+      return <Section key={i}
+                      title={section.title}
+                      callback={() => this.sectionOpenCallback(i)}
+                      openSection={this.state.openSection}
+                      sectionId={i}>
+        {section.text}
+      </Section>
+    });
+  }
 
   render() {
     return (
       <div>
         <div>{this.props.title}</div>
-        {this.sections}
+        {this.sectionJSX()}
       </div>
     );
   }
